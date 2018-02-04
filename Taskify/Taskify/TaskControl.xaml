@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Taskify.TaskControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Taskify"
+             mc:Ignorable="d">
+    <Border HorizontalAlignment="Left" VerticalAlignment="Top"  BorderBrush="Black" BorderThickness="0.5">
+        <Grid Width="200" Height="180" Margin="0,20,0,0" MouseEnter="Background_MouseEnter" MouseLeave="Background_MouseLeave">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15*"/>
+                <RowDefinition Height="60*"/>
+                <RowDefinition Height="25*"/>
+            </Grid.RowDefinitions>
+            <Grid Name="Header" Grid.Row="0" Margin="10,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90*"/>
+                    <ColumnDefinition Width="10*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Name="Title" Content="Title" FontWeight="Bold" FontSize="16" HorizontalAlignment="Stretch" Foreground="WhiteSmoke" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Padding="10, 0"/>
+                <Image Name="TaskAction" Grid.Column="1" Source="images/checked.png" OpacityMask="#FF591212" Cursor="Hand"  MouseDown="Task_MouseDown" MouseEnter="Task_MouseEnter" MouseLeave="Task_MouseLeave"/>
+            </Grid>
+            <Grid Name="Body" Grid.Row="1" Margin="10, 0">
+                <TextBlock Name="Description" Text="Description" TextWrapping="Wrap" Foreground="FloralWhite" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="10" FontSize="12"/>
+            </Grid>
+            <Grid Name="Footer" Grid.Row="2">
+                <Label Name="CountDown" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="NavajoWhite" FontSize="18" Padding="5" Content="12:34:23" />
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>
