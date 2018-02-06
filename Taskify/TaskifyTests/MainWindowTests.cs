@@ -30,5 +30,41 @@ namespace Taskify.Tests
             Assert.AreEqual(MainWindow.GetPriorityFromInt(3), "Low");
             Assert.AreEqual(MainWindow.GetPriorityFromInt(4), "Common");
         }
+
+        [TestMethod()]
+        public void MainWindowTest()
+        {
+
+        }
+
+        [TestMethod()]
+        public void BackHome_HandlerTest()
+        {
+        }
+
+        [TestMethod()]
+        public void BackAddTask_HandlerTest()
+        {
+        }
+
+        [TestMethod()]
+        public void BackProductivity_HandlerTest()
+        {
+        }
+
+        [TestMethod()]
+        public void GetTasksTest()
+        {
+        }
+
+        [TestMethod()]
+        public void CreateNewTaskTest()
+        {
+        }
+
+        [TestMethod()]
+        public void GetBrushFromPriorityTest()
+        {
+        }
     }
 }
