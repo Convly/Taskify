@@ -96,10 +96,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ProjectsControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="TaskControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -111,9 +107,6 @@
     </Compile>
     <Compile Include="ProductivityControl.xaml.cs">
       <DependentUpon>ProductivityControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ProjectsControl.xaml.cs">
-      <DependentUpon>ProjectsControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

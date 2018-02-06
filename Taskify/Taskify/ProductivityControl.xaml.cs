@@ -71,6 +71,7 @@ namespace Taskify
                 Main.Background.Opacity = 0.4;
                 CountDown.Background = MainWindow.GetBrushFromPriority(CTask.Priority);
                 CountDown.Background.Opacity = 0.3;
+                Done.Content = "DONE";
             }
             else
             {
@@ -78,6 +79,7 @@ namespace Taskify
                 Description.Text = "It seems that you don't have any task to do, please come back when you will have some work to achieve :)";
                 CountDown.Content = DateTime.Now.ToLongTimeString();
                 Tags.Content = "";
+                Done.Content = "Soon...";
             }
         }
 
@@ -88,6 +90,9 @@ namespace Taskify
             Console.WriteLine(r);
 
             Done.Background.Opacity = 0.7;
+
+            if (CTask == null)
+                return;
 
             string rem = "";
             switch (r)
@@ -115,7 +120,7 @@ namespace Taskify
         private void Done_MouseLeave(object sender, MouseEventArgs e)
         {
             Done.Background.Opacity = 1;
-            Done.Content = "DONE";
+            Done.Content = (CTask == null)? "Soon...": "DONE";
         }
 
         private void Done_MouseDown(object sender, MouseButtonEventArgs e)
@@ -125,6 +130,9 @@ namespace Taskify
 
         private void ArchiveAndGetNewTask()
         {
+            if (CTask == null)
+                return;
+
             Dictionary<String, String> data = new Dictionary<string, string>
             {
                 { "Status", "1" }
